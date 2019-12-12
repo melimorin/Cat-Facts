@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('/facts', 'FactController@facts');
+

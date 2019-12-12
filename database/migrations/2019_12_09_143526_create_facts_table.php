@@ -15,7 +15,7 @@ class CreateFactsTable extends Migration
     {
         Schema::create('facts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('faits');
+            $table->text('faits');
             $table->timestamps();
         });
     }

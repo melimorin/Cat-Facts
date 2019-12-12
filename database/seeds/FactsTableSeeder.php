@@ -2,26 +2,23 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+
+use App\Fact;
 
 
 class FactsTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
     public function run() {
 
-            $facts = DB::table('tpdeux_laravel')->count();
+        $texteJson = Storage::get("cat-facts.json");
+        $facts = json_decode($texteJson);
 
-            $texteJson = file_get_contents("cat-facts.json");
-            $facts = json_decode($texteJson, true);
+        foreach($facts->data as $fact) {
+            $faits = new Fact();
+            $faits->faits = $fact->fact;
+            $faits->save();
 
-            foreach($facts as $fact) {
-                DB::table('tpdeux_laravel')->insert([
-                    'title'=> $fact["title"],
-                    ]);
         }
 
     }
