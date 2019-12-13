@@ -29,8 +29,8 @@
 		<div id="menu-1" class="homepage home-section container">
 			<div class="home-intro text-center">
 				<h2 class="welcome-title animated fadeInLeft">@yield('fact title')</h2>
-                <font color="purple">@yield('contenu')</font>
-                <font color="purple">@yield('contenu-liste')</font>
+                @yield('contenu')
+                @yield('contenu-liste')
 
 			</div>
 			<div class="home-projects">
@@ -69,7 +69,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="main-footer">
-					@yield(boutons)
+					@yield('boutons')
 				</div>
 			</div>
 		</div>

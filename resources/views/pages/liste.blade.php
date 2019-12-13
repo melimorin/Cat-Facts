@@ -8,7 +8,7 @@
 
     @foreach ($lesFaits as $unfait)
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">{{$unfait->faits}}</li>
+            <li class="list-group-item">{{$unfait->id}}: {{$unfait->faits}}</li>
         </ul>
     @endforeach
 

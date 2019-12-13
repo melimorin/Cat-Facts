@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 use App\Fact;
 
@@ -17,7 +18,8 @@ class FactController extends Controller
 
     public function facts() {
         $lesFaits = Fact::get();
-        return view('pages.faits', ['lesFaits'=>$lesFaits]);
+        $lesFaits = Str::limit($lesFaits, 40);
+        return view('pages.liste', ['lesFaits'=>$lesFaits]);
     }
 
     public function ajout() {
