@@ -7,8 +7,9 @@
 @section('contenu-liste')
 
     @foreach ($lesFaits as $unfait)
+
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">{{$unfait->id}}: {{$unfait->faits}}</li>
+            <li class="list-group-item">{{$unfait->id}}: {{ Str::limit($unfait->faits, 20}}</li>
         </ul>
     @endforeach
 
