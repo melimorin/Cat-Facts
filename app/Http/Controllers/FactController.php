@@ -18,7 +18,6 @@ class FactController extends Controller
 
     public function facts() {
         $lesFaits = Fact::get();
-        // $lesFaits = Str::limit($lesFaits, 40);
         return view('pages.liste', ['lesFaits'=>$lesFaits]);
     }
 

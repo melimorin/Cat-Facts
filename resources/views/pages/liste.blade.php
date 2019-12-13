@@ -9,7 +9,7 @@
     @foreach ($lesFaits as $unfait)
 
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">{{$unfait->id}}: {{ Str::limit($unfait->faits, 20}}</li>
+            <li class="list-group-item">{{$unfait->id}}: {{ Str::limit($unfait->faits, 40)}}</li>
         </ul>
     @endforeach
 
