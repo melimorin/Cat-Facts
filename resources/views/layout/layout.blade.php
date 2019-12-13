@@ -7,7 +7,6 @@
 
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/templatemo_style.css')}}">
-    {{-- <link rel="stylesheet" href="{{asset('css/styles.css)}}"> --}}
 </head>
 <body>
 	<header class="site-header container animated fadeInDown">
@@ -29,35 +28,33 @@
 	<div id="menu-container">
 		<div id="menu-1" class="homepage home-section container">
 			<div class="home-intro text-center">
-				<h2 class="welcome-title animated fadeInLeft">Fact #1</h2>
-                @yield('contenu')
-                <p>On average, cats spend 2/3 of every day sleeping. That means a nine-year-old cat has been awake for only three years of its life.</p>
+				<h2 class="welcome-title animated fadeInLeft">@yield('fact title')</h2>
+                <font color="purple">@yield('contenu')</font>
+                <font color="purple">@yield('contenu-liste')</font>
+
 			</div>
 			<div class="home-projects">
-
-                @yield('contenu')
-
 				<div class="row">
 					<div class="project-home-holder">
 						<div class="row">
 							<div class="col-md-3 col-sm-3">
 								<div class="project-item one">
-									<img src="img/img.png" alt="">
+                                    <img src="img/chat1.jpg" alt="">
 								</div>
 							</div>
 							<div class="col-md-3 col-sm-3">
 								<div class="project-item two">
-									<img src="img/img.png" alt="">
+									<img src="img/chat2.jpg" alt="">
 								</div>
 							</div>
 							<div class="col-md-3 col-sm-3">
 								<div class="project-item three">
-									<img src="img/img.png" alt="">
+									<img src="img/chat3.jpg" alt="">
 								</div>
 							</div>
 							<div class="col-md-3 col-sm-3">
 								<div class="project-item four">
-									<img src="img/img.png" alt="">
+									<img src="img/chat4.jpg" alt="">
 								</div>
 							</div>
 						</div>
@@ -72,10 +69,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="main-footer">
-					<ul class="social">
-						<li><a href="#">Liste de faits</a></li>
-						<li><a href="#">Ajouter un fait</a></li>
-					</ul>
+					@yield(boutons)
 				</div>
 			</div>
 		</div>

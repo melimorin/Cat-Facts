@@ -17,5 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/facts', 'FactController@facts');
+Route::get('/facts', 'FactController@randomfact');
+Route::get('/liste', 'FactController@facts');
+Route::get('/ajout', 'FactController@ajout');
 
