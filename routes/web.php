@@ -17,7 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/facts', 'FactController@randomfact');
+Route::get('/', 'FactController@randomfact');
 Route::get('/liste', 'FactController@facts');
 Route::get('/ajout', 'FactController@ajout');
+Route::post('/ajout', 'FactController@formulaire');
+Route::get('/modif/{id}', 'FactController@modif');
+Route::post('/modif/{id}', 'FactController@formulairemodif');
+Route::get('/delete/{id}', 'FactController@delete');
 

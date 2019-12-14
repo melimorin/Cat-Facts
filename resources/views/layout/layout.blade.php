@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/templatemo_style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
 </head>
 <body>
 	<header class="site-header container animated fadeInDown">
@@ -28,9 +29,9 @@
 	<div id="menu-container">
 		<div id="menu-1" class="homepage home-section container">
 			<div class="home-intro text-center">
+            @yield('boutons-top')
 				<h2 class="welcome-title animated fadeInLeft">@yield('fact title')</h2>
                 @yield('contenu')
-                @yield('contenu-liste')
 
 			</div>
 			<div class="home-projects">
@@ -39,22 +40,22 @@
 						<div class="row">
 							<div class="col-md-3 col-sm-3">
 								<div class="project-item one">
-                                    <img src="img/chat1.jpg" alt="">
+                                    <img src="/img/chat1.jpg" alt="">
 								</div>
 							</div>
 							<div class="col-md-3 col-sm-3">
 								<div class="project-item two">
-									<img src="img/chat2.jpg" alt="">
+									<img src="/img/chat2.jpg" alt="">
 								</div>
 							</div>
 							<div class="col-md-3 col-sm-3">
 								<div class="project-item three">
-									<img src="img/chat3.jpg" alt="">
+									<img src="/img/chat3.jpg" alt="">
 								</div>
 							</div>
 							<div class="col-md-3 col-sm-3">
 								<div class="project-item four">
-									<img src="img/chat4.jpg" alt="">
+									<img src="/img/chat4.jpg" alt="">
 								</div>
 							</div>
 						</div>
