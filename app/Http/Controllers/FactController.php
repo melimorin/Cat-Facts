@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use App\Http\Requests\FactRequest;
 
 use App\Fact;
 
@@ -21,7 +22,10 @@ class FactController extends Controller
         return view('pages.liste', ['lesFaits'=>$lesFaits]);
     }
 
-    public function formulaire(Request $request) {
+    public function formulaire(FactRequest $request) {
+
+        $entree = $request->validated();
+
         $fait = $request->input('faits');
         $entity = new Fact;
         $entity->faits = $fait;
@@ -35,7 +39,10 @@ class FactController extends Controller
 
     }
 
-    public function formulairemodif(Request $request, $id) {
+    public function formulairemodif(FactRequest $request, $id) {
+
+        $entree = $request->validated();
+
         // va chercher l'object original
         $fact = Fact::find($id);
 
@@ -59,6 +66,8 @@ class FactController extends Controller
 
         return redirect('/liste');
     }
+
+
 
 
 }

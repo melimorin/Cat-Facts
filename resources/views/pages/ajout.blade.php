@@ -1,6 +1,15 @@
 @extends('layout.layout')
 
 @section('contenu')
+@if ($errors->any())
+
+@foreach ($errors->all() as $error)
+    <div class="alert alert-danger">
+        {{ $error }}
+    </div>
+@endforeach
+
+@endif
 <form action="/ajout" method="post">
 @csrf
     <div class="form-group">
