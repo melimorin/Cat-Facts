@@ -16,6 +16,6 @@
         <label for="faits">Modifier</label>
         <input class="form-control" type="text" name="faits" id="faits" value="{{$faits}}">
     </div>
-    <input class="btn btn-primary w-100" type="submit" value="Creer">
+    <input class="btn btn-primary w-100" type="submit" value="Modifier">
 </form>
 @endsection
